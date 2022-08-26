@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
-  <display-name>Matrix Web</display-name>
+  <display-name>Matrix WEB</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
@@ -9,17 +9,14 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-
-	<servlet>
-		<description>Hey Matrix</description>
-		<display-name>Matrix Web</display-name>
-		<servlet-name>Matrix-Web</servlet-name>
-		<servlet-class>com.MatrixWeb.Controllers.HttpController</servlet-class>
-	</servlet>
-	
-	<servlet-mapping>
-		<servlet-name>Matrix-Web</servlet-name>
-		<url-pattern>/Hey</url-pattern>
-	</servlet-mapping>
-
+  
+  <servlet>
+  	<servlet-name>ObjectController</servlet-name>
+  	<servlet-class>com.Matrix.Controllers.ObjectController</servlet-class>
+  </servlet>
+  <!-- for http mapping -->
+  <servlet-mapping>
+  	<servlet-name>ObjectController</servlet-name>
+  	<url-pattern>/matrix/*</url-pattern>
+  </servlet-mapping>
 </web-app>
