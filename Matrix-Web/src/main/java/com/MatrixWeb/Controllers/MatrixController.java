@@ -49,6 +49,7 @@ public class MatrixController extends HttpServlet {
 		matrix.StoreMatrix(MatrixUnraveled);
 //		"Created" a new matrix
 		response.setStatus(201);
+		response.setHeader("content-type", "text/html");
 	}
 	
 	@Override
@@ -74,6 +75,7 @@ public class MatrixController extends HttpServlet {
 //			"Ok" the matrix updated
 //			i could send this to another server.
 			response.setStatus(200);
+			response.setHeader("content-type", "text/html");
 		} else {
 //			"Bad Request" of matrix not updating
 			response.setStatus(400);
@@ -146,6 +148,7 @@ public class MatrixController extends HttpServlet {
 //			"Ok" the matrix updated
 //			i could send this to another server.
 			response.setStatus(200);
+			response.setHeader("content-type", "text/html");
 		} else {
 //			"Bad Request" of matrix not updating
 			response.setStatus(400);
